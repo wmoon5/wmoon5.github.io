@@ -6,8 +6,8 @@
 </description>
     <link>http://wmmoon.com/</link>
     <atom:link href="http://wmmoon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 27 Jan 2017 11:28:50 -0600</pubDate>
-    <lastBuildDate>Fri, 27 Jan 2017 11:28:50 -0600</lastBuildDate>
+    <pubDate>Fri, 27 Jan 2017 11:31:50 -0600</pubDate>
+    <lastBuildDate>Fri, 27 Jan 2017 11:31:50 -0600</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -32,7 +32,7 @@
 
 &lt;p&gt;We can confirm some of these trends by looking at the types of shots Kobe was shooting.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/wmoon5/wmoon5.github.io/blob/master/images/kobe/ShotZones_Pie.png?raw=true&quot; alt=&quot;Kobe shot types distribution&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/wmoon5/wmoon5.github.io/blob/master/images/kobe/ShotTypes_Pie.png?raw=true&quot; alt=&quot;Kobe shot types distribution&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Here we can see more obviously the increase in jump shooting and the decrease in layups and dunks throughout Kobe’s career.&lt;/p&gt;
 
@@ -43,17 +43,6 @@
         <pubDate>Thu, 26 Jan 2017 00:00:00 -0600</pubDate>
         <link>http://wmmoon.com/2017/01/26/Kobe.html</link>
         <guid isPermaLink="true">http://wmmoon.com/2017/01/26/Kobe.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Hello world</title>
-        <description>&lt;p&gt;Hello world! Still learning how to use jekyll. Please hold.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 11 Aug 2016 00:00:00 -0500</pubDate>
-        <link>http://wmmoon.com/2016/08/11/first-post.html</link>
-        <guid isPermaLink="true">http://wmmoon.com/2016/08/11/first-post.html</guid>
         
         
       </item>
