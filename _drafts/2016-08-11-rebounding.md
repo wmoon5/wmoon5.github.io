@@ -18,7 +18,7 @@ I look to explore this question using some data I scraped from the fabulously fu
 
 First, it's always fun to look at some correlations:
 
-![here is a correlation heatmap](http://127.0.0.1:4000/images/test.eps)
+![here is a correlation heatmap](https://github.com/wmoon5/wmoon5.github.io/blob/master/images/kobe/FGPct_ShotZones.eps)
 
 Here is a [link](http://127.0.0.1:4000/images/test.eps) to the correlation heatmap if you'd like to open in a separate tab or window.
 
