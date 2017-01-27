@@ -11,7 +11,6 @@ Computational Biology and Genomics
 ----------------------------------
 My work is focused on applying methods from various fields including statistics, machine learning, physics, and graph theory on questions in cancer genomics. Currently I am working on building and interpreting models to predict the binding of transcription factors to specific parts of our DNA. 
 
-**The big question: how in the world do these transcription factors know where to go?**
 
 Particle Physics
 -----------------
