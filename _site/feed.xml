@@ -6,8 +6,8 @@
 </description>
     <link>http://wmmoon.com/</link>
     <atom:link href="http://wmmoon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 29 Jan 2017 19:52:15 -0600</pubDate>
-    <lastBuildDate>Sun, 29 Jan 2017 19:52:15 -0600</lastBuildDate>
+    <pubDate>Mon, 30 Jan 2017 08:23:48 -0600</pubDate>
+    <lastBuildDate>Mon, 30 Jan 2017 08:23:48 -0600</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -62,7 +62,7 @@
 
 &lt;p&gt;We can interpret these plots like this. The horizontal x-axis tells us the temperature and the vertical y-axis tells us the relative affect that a given temperature has on the final prediction of the BDT. For example, we can see that at a cold temperature of 50 degrees, the line is at -10 on the y-axis. This means that the BDT sees that it is cold and will generally reduce its prediction by about 10 people because of the temperature. It’s worth noting that these are all statements regarding only averages and average effects, but they nonetheless give us an idea of what the BDT is doing.&lt;/p&gt;
 
-&lt;p&gt;And fortunately enough the temperature partial dependence plot affirms what many of us probably already know instinctively. Cold temperatures dissuade people from leaving their home and going to the gym.&lt;/p&gt;
+&lt;p&gt;And fortunately enough the temperature partial dependence plot affirms what many of us probably already know intuitively. Cold temperatures dissuade people from leaving their home and going to the gym.&lt;/p&gt;
 
 &lt;p&gt;So, there you have it! A cute little analysis of gym crowds. To recap what we’ve learned:&lt;/p&gt;
 
@@ -73,8 +73,7 @@
   &lt;li&gt;The weather plays a large role in gym crowds and the best times to go are when it’s not so nice outside&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Have a good workout!&lt;/p&gt;
-
+&lt;p&gt;Enjoy your workout!&lt;/p&gt;
 </description>
         <pubDate>Sun, 29 Jan 2017 00:00:00 -0600</pubDate>
         <link>http://wmmoon.com/2017/01/29/gymcrowd.html</link>
