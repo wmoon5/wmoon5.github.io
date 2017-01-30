@@ -6,9 +6,81 @@
 </description>
     <link>http://wmmoon.com/</link>
     <atom:link href="http://wmmoon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 27 Jan 2017 12:56:07 -0600</pubDate>
-    <lastBuildDate>Fri, 27 Jan 2017 12:56:07 -0600</lastBuildDate>
+    <pubDate>Sun, 29 Jan 2017 18:46:49 -0600</pubDate>
+    <lastBuildDate>Sun, 29 Jan 2017 18:46:49 -0600</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>New Years and Crowded Gyms</title>
+        <description>&lt;p&gt;It’s the start of a new year and new semester at college campuses everywhere. And what does that mean? Crowded gyms.&lt;/p&gt;
+
+&lt;p&gt;Many of us have experienced the frustration of walking into a crowded gym and all of its associated negative consequences and if you’re like me, are forced to  resort to going to the gym close to midnight in order to avoid long waits. The gym does seem to be less crowded at these late hours, but it comes at the cost of having a hard time falling asleep at night. Still worht it to me. Today we’ll look to find a better way to decide when to hit the gym so that you and I can look and feel as good as possible while minimizing our crowded gym frustrations.&lt;/p&gt;
+
+&lt;p&gt;First, let’s take a look at the average gym numbers throughout the day.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/wmoon5/wmoon5.github.io/blob/master/images/gym_crowds/overall_average.png?raw=true&quot; alt=&quot;Gym crowdes throughout day&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can notice a few things:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Numbers at the gym seem to start dipping around 10 PM&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The gym is relatively empty in the mornings, but you probably want to finish your workout by 8 AM  on the weekdays and 9 AM on the weekends&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;There’s a noticeable dip around 2 PM possibly due to people finishing up and leaving after a mid-day workout during their lunch hours&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;My guess is that these two pieces of information (the time and whether it is the weekend or weekday) make up the vast majority of our thought process when deciding about going to the gym. So, let’s measure how accurate we can be using this method. We’ll measure the average number of people at the gym for each 15 minute interval of the day for both weekdays and weekends and make that our prediction given the time of day and whether it is the weekday or weekend.&lt;/p&gt;
+
+&lt;p&gt;It’s very important to remember to split your data into a training and test set when measuring the performance of a predictor, so I make sure to do that here. Otherwise it’s like a teacher putting the exact some questions from past homeworks on a test. The test is meant to measure how well a student knows the material, but in reality the test scores will be higher than they should be because the students will have simply remembered the answers to the question without really having to solve it.&lt;/p&gt;
+
+&lt;p&gt;So how well does this method perform? We can calculate the &lt;a href=&quot;https://en.wikipedia.org/wiki/Mean_squared_error&quot;&gt;mean squred error (MSE)&lt;/a&gt; and come out to a value of &lt;strong&gt;12.6&lt;/strong&gt;,meaning our prediction using this method will generally be wrong by about 12.6 people.&lt;/p&gt;
+
+&lt;p&gt;This seems alright, but I hope to do better by incorporating some more information and using a machine learning algorithm called &lt;a href=&quot;https://en.wikipedia.org/wiki/Gradient_boosting&quot;&gt;Gradient Boosted&lt;/a&gt; Decision Trees (BDT). I won’t go into the details of how they work right now (that’s for another post), but we will look at some results. The features I will use to make this prediction are as follows:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The time of day&lt;/li&gt;
+  &lt;li&gt;Day of the week&lt;/li&gt;
+  &lt;li&gt;Whether it is a holiday&lt;/li&gt;
+  &lt;li&gt;The temperature&lt;/li&gt;
+  &lt;li&gt;Whether it is the beginning of the semester or not&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;And how well does this method perform?? The MSE comes out to around &lt;strong&gt;7.8&lt;/strong&gt;, which is a significant improvement over our previous method.&lt;/p&gt;
+
+&lt;p&gt;It turns out that we can actually look at how important the different features are for the BDT to make its predictions. Here we can see a plot of the different features in order of decreasing importance.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/wmoon5/wmoon5.github.io/blob/master/images/gym_crowds/FeatureImportances.png?raw=true&quot; alt=&quot;Feature Importances&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Interestingly, the temperature is the most important feature and not the time! But, just knowing that the temperature is important doesn’t really help us that much. We want to know &lt;em&gt;how&lt;/em&gt; it is affecting the gym crowd. It turns out there are cool plots called &lt;a href=&quot;http://scikit-learn.org/stable/auto_examples/ensemble/plot_partial_dependence.html&quot;&gt;partial dependence&lt;/a&gt; plots that help us interpret what the BDT is doing with the temperature information.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/wmoon5/wmoon5.github.io/blob/master/images/gym_crowds/TempPartialDependence.png?raw=true&quot; alt=&quot;Temperature Partial Dependence&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can interpret these plots like this. The horizontal x-axis tells us the temperature and the vertical y-axis tells us the relative affect that a given temperature has on the final prediction of the BDT. For example, we can see that at a cold temperature of 50 degrees, the line is at -10 on the y-axis. This means that the BDT sees that it is cold and will generally reduce its prediction by about 10 people because of the temperature. Please note that these statements are all statements regarding averages and average effects, but they nonetheless give us an idea of what the BDT is doing.&lt;/p&gt;
+
+&lt;p&gt;And fortunately enough the temperature partial dependence plot affirms what many of us probably already know instinctively. Cold temperatures dissuade people from leaving their home and going to the gym.&lt;/p&gt;
+
+&lt;p&gt;So, there you have it! A cute little analysis of gym crowds. To recap what we’ve learned:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Morning workouts should be done before 8 AM on weekdays and 9 AM on weekends&lt;/li&gt;
+  &lt;li&gt;The gym is generally less crowded overall on the weekends&lt;/li&gt;
+  &lt;li&gt;The weather plays a large role in gym crowds and the best times to go are when it’s not so nice outside&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Have a good workout!&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 29 Jan 2017 00:00:00 -0600</pubDate>
+        <link>http://wmmoon.com/2017/01/29/gymcrowd.html</link>
+        <guid isPermaLink="true">http://wmmoon.com/2017/01/29/gymcrowd.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Kobe Over the Years</title>
