@@ -6,15 +6,17 @@
 </description>
     <link>http://wmmoon.com/</link>
     <atom:link href="http://wmmoon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 30 Jan 2017 14:41:41 -0600</pubDate>
-    <lastBuildDate>Mon, 30 Jan 2017 14:41:41 -0600</lastBuildDate>
+    <pubDate>Mon, 30 Jan 2017 23:50:28 -0600</pubDate>
+    <lastBuildDate>Mon, 30 Jan 2017 23:50:28 -0600</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
         <title>New Years and Crowded Gyms</title>
         <description>&lt;p&gt;It’s the start of a new year and new semester at universities everywhere. And what does that mean? Crowded gyms.&lt;/p&gt;
 
-&lt;p&gt;Many of us have experienced the frustration of walking into a crowded gym and all of its associated negative consequences and if you’re like me, are forced to  resort to going to the gym close to midnight in order to avoid long waits. The gym does seem to be less crowded at these late hours, but it comes at the cost of having a hard time falling asleep at night. Still worth it to me. Today we’ll look to find a better way to decide when to hit the gym so that you and I can look and feel as good as possible while minimizing our crowded gym frustrations.&lt;/p&gt;
+&lt;p&gt;Many of us have experienced the frustration of walking into a crowded gym and all of its associated negative consequences. If you’re like me, you may end up even resorting to going to the gym close to midnight in order to avoid long waits. And though the gym does seem to be less crowded at these late hours, it comes at the cost of having a very hard time falling asleep at night. Still worth it to me.&lt;/p&gt;
+
+&lt;p&gt;Today we’ll look to find a better way to decide when to hit the gym so that you and I can look and feel as good as possible while minimizing our crowded gym frustrations. I have taken a &lt;a href=&quot;https://www.kaggle.com/nsrose7224/crowdedness-at-the-campus-gym&quot;&gt;dataset&lt;/a&gt; from the kaggle website, in which the number of people at a university gym has been recorded at various time intervals throughout the year.&lt;/p&gt;
 
 &lt;p&gt;First, let’s take a look at the average gym numbers throughout the day.&lt;/p&gt;
 
@@ -34,20 +36,20 @@
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;My guess is that these two pieces of information (the time and whether it is the weekend or weekday) make up the vast majority of our thought process when deciding about going to the gym. So, let’s measure how accurate we can be using this method. We’ll measure the average number of people at the gym for each 15 minute interval of the day for both weekdays and weekends and make that our prediction given the time of day and whether it is the weekday or weekend.&lt;/p&gt;
+&lt;p&gt;Most likely it’s these two pieces of information (the time and whether it is the weekend or weekday) that make up the vast majority of our thought process when deciding about going to the gym. So, let’s measure how accurate we can be using this method. By measuring the average number of people at the gym for each 15 minute interval of the day for both weekdays and weekends, a prediction about the gym crowd can be made given the time of day and whether it is the weekend or not.&lt;/p&gt;
 
-&lt;p&gt;It’s very important to remember to split your data into a training and test set when measuring the performance of a predictor, so I make sure to do that here. Otherwise it’s like a teacher putting the exact some questions from past homeworks on a test. The test is meant to measure how well a student knows the material, but in reality the test scores will be higher than they should be because the students will have simply remembered the answers to the question without really having to solve it.&lt;/p&gt;
+&lt;p&gt;It’s very important to remember to split your data into a “training set” and “test set” when measuring the performance of a predictor, so I make sure to do that here. Otherwise it’s almost like a teacher putting the exact some questions from past homeworks on a test. The test is meant to measure how well a student knows the material, but if questions are reused from previous homeworks, then students can simply remember the answers without necessarily actually understanding the material.&lt;/p&gt;
 
-&lt;p&gt;So how well does this method perform? We can calculate the &lt;a href=&quot;https://en.wikipedia.org/wiki/Mean_squared_error&quot;&gt;mean squared error (MSE)&lt;/a&gt; and come out to a value of &lt;strong&gt;12.6&lt;/strong&gt;, meaning our prediction using this method will generally be wrong by about 12.6 people.&lt;/p&gt;
+&lt;p&gt;So how well does this method perform? We can calculate the &lt;a href=&quot;https://en.wikipedia.org/wiki/Mean_squared_error&quot;&gt;mean squared error (MSE)&lt;/a&gt; and return a value of &lt;strong&gt;12.6&lt;/strong&gt;, meaning our prediction using this method will generally be wrong by about 12.6 people (on average).&lt;/p&gt;
 
-&lt;p&gt;This seems alright, but I hope to do better by incorporating some more information and using a machine learning algorithm called &lt;a href=&quot;https://en.wikipedia.org/wiki/Gradient_boosting&quot;&gt;Gradient Boosted&lt;/a&gt; Decision Trees (BDT). I won’t go into the details of how they work right now (that’s for another post), but we will look at some results. The features I will use to make this prediction are as follows:&lt;/p&gt;
+&lt;p&gt;This seems alright, but I hope to do better by incorporating some more information and using a machine learning algorithm called &lt;a href=&quot;https://en.wikipedia.org/wiki/Gradient_boosting&quot;&gt;Gradient Boosted&lt;/a&gt; Decision Trees (BDT). I won’t go into the details of how they work right now (that’s for another post), but we will look at some results. The features used to make the predictions are as follows:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;The time of day&lt;/li&gt;
   &lt;li&gt;Day of the week&lt;/li&gt;
   &lt;li&gt;Whether it is a holiday&lt;/li&gt;
   &lt;li&gt;The temperature&lt;/li&gt;
-  &lt;li&gt;Whether it is the beginning of the semester or not&lt;/li&gt;
+  &lt;li&gt;Whether it is the beginning of the semester&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;And how well does this method perform?? The MSE comes out to around &lt;strong&gt;7.8&lt;/strong&gt;, which is a significant improvement over our previous method.&lt;/p&gt;
@@ -70,7 +72,7 @@
   &lt;li&gt;Morning workouts should be done before 8 AM on weekdays and 9 AM on weekends&lt;/li&gt;
   &lt;li&gt;The gym starts clearing up around 10 PM&lt;/li&gt;
   &lt;li&gt;It’s generally less crowded overall on the weekends&lt;/li&gt;
-  &lt;li&gt;The weather plays a large role in gym crowds and the best times to go are when it’s not so nice outside&lt;/li&gt;
+  &lt;li&gt;The weather plays a large role and the best times to go are when it’s too cold&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Enjoy your workout!&lt;/p&gt;
@@ -86,21 +88,23 @@
         <title>Kobe Over the Years</title>
         <description>&lt;p&gt;Those who know me know that I’m a huge basketball fan. And now that my playing days are over, I have transitioned from playing basketball to the even more exciting activity of analyzing basketball data.&lt;/p&gt;
 
-&lt;p&gt;I’ll be writing my first post on one of basketball’s greatest icons, Kobe Bryant. Considered one of the greatest and most popular players to every play the game, he is particularly interesting because of his ability to stay dominant for so many years. He was able to do so, not only by being gifted with great genes and working extremely hard, but also by being smart and changing his style of play throughout his career to adjust to the changes in the NBA, his teammates, and his own body.&lt;/p&gt;
+&lt;p&gt;Today we’ll be looking at one of basketball’s greatest icons, Kobe Bryant. Considered one of the greatest and most popular players to every play the game, he is particularly interesting because of his ability to stay dominant well into his 30’s, which is considered old for a professional basketball player. He was able to do so, not only by working super hard and using his incredible physical gifts, but also by being extremely smart and adaptins his style of play throughout his career to adjust to the changes in the NBA, his teammates, and his own body.&lt;/p&gt;
 
-&lt;p&gt;For the sake of this post, I will divide Kobe’s career into five different eras. First, we call the first three years of Kobe’s career as the &lt;a href=&quot;https://i.ytimg.com/vi/eaJMLnt5bdU/maxresdefault.jpg&quot;&gt;“Young Kobe”&lt;/a&gt; era, which is followed by the &lt;a href=&quot;https://static1.squarespace.com/static/564173e3e4b047c0f3f64775/t/570e96fd27d4bd2e542dfb32/1460573954240/&quot;&gt;“Frobe”&lt;/a&gt; era, during which Kobe rocked his famous afro. After that we have &lt;a href=&quot;http://s3.amazonaws.com/tpt-uploads-production/uploads/56704175-copy-3-e1453399062311.jpg&quot;&gt;“Solo Kobe”&lt;/a&gt; during which he had his historical 81 point game (in which Kwame Brown played &lt;a href=&quot;https://pbs.twimg.com/media/Cf-ATfBWIAAOkQ5.jpg&quot;&gt;32 minutes&lt;/a&gt;). Then we have &lt;a href=&quot;http://www.rantsports.com/nba/files/2015/03/Kobe-Bryant.jpg&quot;&gt;“Black Mamba”&lt;/a&gt; Kobe followed by &lt;a href=&quot;http://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/lakers/images/press/1213_allstar/ts_010103allstar670.jpg&quot;&gt;“Vino”&lt;/a&gt; Kobe. (These names and eras were inspired by a reddit post I read a while ago)&lt;/p&gt;
+&lt;p&gt;For the sake of this post, let’s divide Kobe’s career into five different eras. First, we call the first three years of Kobe’s career as the &lt;a href=&quot;https://i.ytimg.com/vi/eaJMLnt5bdU/maxresdefault.jpg&quot;&gt;“Young Kobe”&lt;/a&gt; era, which is followed by the &lt;a href=&quot;https://static1.squarespace.com/static/564173e3e4b047c0f3f64775/t/570e96fd27d4bd2e542dfb32/1460573954240/&quot;&gt;“Frobe”&lt;/a&gt; era, during which Kobe rocked his famous afro. After that we have &lt;a href=&quot;http://s3.amazonaws.com/tpt-uploads-production/uploads/56704175-copy-3-e1453399062311.jpg&quot;&gt;“Solo Kobe”&lt;/a&gt; during which he had his historical 81 point game (in which Kwame Brown played &lt;a href=&quot;https://pbs.twimg.com/media/Cf-ATfBWIAAOkQ5.jpg&quot;&gt;32 minutes&lt;/a&gt;). Then we have &lt;a href=&quot;http://www.rantsports.com/nba/files/2015/03/Kobe-Bryant.jpg&quot;&gt;“Black Mamba”&lt;/a&gt; Kobe followed by &lt;a href=&quot;http://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/lakers/images/press/1213_allstar/ts_010103allstar670.jpg&quot;&gt;“Vino”&lt;/a&gt; Kobe. (These names and eras were inspired by a reddit post I read a while ago)&lt;/p&gt;
 
 &lt;p&gt;First let us take a look at his shooting percentages from different distances during each of these eras.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://github.com/wmoon5/wmoon5.github.io/blob/master/images/kobe/FGPct_ShotZones.png?raw=true&quot; alt=&quot;Kobe fgpct barchart&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Notice Kobe’s drastic improvement in the in the 8-16 ft. range. Anyone who watched Kobe during the second half of his career has seen shots like &lt;a href=&quot;https://68.media.tumblr.com/dfb8b3148d2e327bf306064f835cd569/tumblr_o3zj3nVBtk1s3gys4o1_400.gif&quot;&gt;this one&lt;/a&gt; countless times and it’s exactly this improved mid-range game that allowed Kobe to remain an elite player for so long. Also, interestingly enough, we can see Kobe’s percentages in the 24+ ft. range decrease fairly consistently, which I hadn’t really expected.&lt;/p&gt;
+&lt;p&gt;Notice Kobe’s drastic improvement in the in the 8-16 ft. range. Anyone who watched Kobe during the second half of his career has seen shots like &lt;a href=&quot;https://68.media.tumblr.com/dfb8b3148d2e327bf306064f835cd569/tumblr_o3zj3nVBtk1s3gys4o1_400.gif&quot;&gt;this one&lt;/a&gt; countless times and it’s exactly this improved mid-range game that became an increasingly important aspect of Kobe’s offensive game and contributed to his continued dominance. 
+Also, interestingly enough, we can see Kobe’s percentages in the 24+ ft. range decrease fairly consistently, which seems to go against the popular thought that his 3-pt shooting improved throughout his career.&lt;/p&gt;
 
 &lt;p&gt;Now, how about we look at how often Kobe was shooting from these distances.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://github.com/wmoon5/wmoon5.github.io/blob/master/images/kobe/ShotZones_Pie.png?raw=true&quot; alt=&quot;Kobe shot distance distribution&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;To me, the most obvious trend is the decrease in shots from fewer than 8 ft. away. Presumably a large portion of these shots are from driving and attacking the basket, which is taxing on the body and thus more difficult for older players. I also find it interesting to notice that only Solo Kobe shot more than half of his shots from more than 16 ft. away. Solo Kobe also happened to be the version of Kobe with the highest rate of scoring, clocking in at a whopping 35.4 points per game in his ‘05-‘06 season. However, he was also shooting way more shots per game that season than any of his other seasons, so my interpretation is that most of the extra shots he was taking that season and during the Solo Kobe era were from greater distances because generally it takes less energy to pull up for a long range jumper than having to battle a defender for position and take a shot from closer.&lt;/p&gt;
+&lt;p&gt;One of the most obvious trends seems to be the decrease in shots from fewer than 8 ft. away. Presumably a large portion of these shots are from driving and attacking the basket, which turns out to be extremely taxing on the body, espcially for older players.&lt;br /&gt;
+It is also interesting to notice that only Solo Kobe shot more than half of his shots from more than 16 ft. away. Take note that Solo Kobe also happened to be the version of Kobe that scored most prolifically, clocking in at a whopping 35.4 points per game in his ‘05-‘06 season. However, he was also shooting the most shots per game that season than any of his other seasons, so the interpretation is that most of these extra shots he was taking that season and during the Solo Kobe era were from greater distances. This makes sense because generally it takes less energy to pull up for a long range jumper than having to battle a defender for position and take a shot from closer.&lt;/p&gt;
 
 &lt;p&gt;We can confirm some of these trends by looking at the types of shots Kobe was shooting.&lt;/p&gt;
 
