@@ -1,18 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>W.M.Moon</title>
-    <description>A collection of thoughts on science, sports, and other fun stuff.
-</description>
-    <link>http://wmmoon.com/</link>
-    <atom:link href="http://wmmoon.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 12 Feb 2017 12:44:26 -0600</pubDate>
-    <lastBuildDate>Sun, 12 Feb 2017 12:44:26 -0600</lastBuildDate>
-    <generator>Jekyll v3.2.1</generator>
-    
-      <item>
-        <title>Do rebounds really win games?</title>
-        <description>&lt;p&gt;If you’re a basktball fan you might have heard this popular saying: “Rebounds win games!”&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-05-12T21:55:47-05:00</updated><id>http://localhost:4000/</id><title type="html">W.M.Moon</title><subtitle>Some of my thoughts.</subtitle><author><name>wmmoon</name></author><entry><title type="html">Do rebounds really win games?</title><link href="http://localhost:4000/2017/02/12/rebounding.html" rel="alternate" type="text/html" title="Do rebounds really win games?" /><published>2017-02-12T00:00:00-06:00</published><updated>2017-02-12T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/12/rebounding</id><content type="html" xml:base="http://localhost:4000/2017/02/12/rebounding.html">&lt;p&gt;If you’re a basktball fan you might have heard this popular saying: “Rebounds win games!”&lt;/p&gt;
 
 &lt;p&gt;For those non-basketball junkies out there, a rebound is when a player retrieves the ball after someone has just missed a shot. An “offensive rebound” is when your team is on offense and someone on your own team has just missed a shot and a “defensive rebound” is when your team is on defense and someone on the other team has just missed a shot.&lt;/p&gt;
 
@@ -46,18 +32,7 @@ In other words, maybe the real explanation is that the team that happens to be s
 
 &lt;p&gt;So, what does this all mean? It means that my theory doesn’t seem to be correct. Although the correlation between Plus/Minus and REB_DIFF did decrease after removing the effect of FGPCT_DIFF, there still remained an appreciably correlation afterwards. In other words, it does seem like winning the rebounding battle is indeed one of the most important factors in winning a basketball game and it isn’t simply a result of shooting better than the other team.&lt;/p&gt;
 
-&lt;p&gt;Therefore, to all you basketball players out there, get after those boards! Here’s one of my &lt;a href=&quot;http://i.imgur.com/Sq6esXu.jpg&quot;&gt;favorite pictures&lt;/a&gt; for inspiration.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 12 Feb 2017 00:00:00 -0600</pubDate>
-        <link>http://wmmoon.com/2017/02/12/rebounding.html</link>
-        <guid isPermaLink="true">http://wmmoon.com/2017/02/12/rebounding.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>New Years and Crowded Gyms</title>
-        <description>&lt;p&gt;It’s the start of a new year and new semester at universities everywhere. And what does that mean? Crowded gyms.&lt;/p&gt;
+&lt;p&gt;Therefore, to all you basketball players out there, get after those boards! Here’s one of my &lt;a href=&quot;http://i.imgur.com/Sq6esXu.jpg&quot;&gt;favorite pictures&lt;/a&gt; for inspiration.&lt;/p&gt;</content><author><name>wmmoon</name></author><summary type="html">If you’re a basktball fan you might have heard this popular saying: “Rebounds win games!”</summary></entry><entry><title type="html">New Years and Crowded Gyms</title><link href="http://localhost:4000/2017/01/29/gymcrowd.html" rel="alternate" type="text/html" title="New Years and Crowded Gyms" /><published>2017-01-29T00:00:00-06:00</published><updated>2017-01-29T00:00:00-06:00</updated><id>http://localhost:4000/2017/01/29/gymcrowd</id><content type="html" xml:base="http://localhost:4000/2017/01/29/gymcrowd.html">&lt;p&gt;It’s the start of a new year and new semester at universities everywhere. And what does that mean? Crowded gyms.&lt;/p&gt;
 
 &lt;p&gt;Many of us have experienced the frustration of walking into a crowded gym and all of its associated negative consequences. If you’re like me, you may end up even resorting to going to the gym close to midnight in order to avoid long waits. And though the gym does seem to be less crowded at these late hours, it comes at the cost of having a very hard time falling asleep at night. Still worth it to me.&lt;/p&gt;
 
@@ -120,18 +95,7 @@ In other words, maybe the real explanation is that the team that happens to be s
   &lt;li&gt;The weather plays a large role and the best times to go are when it’s too cold&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Enjoy your workout!&lt;/p&gt;
-</description>
-        <pubDate>Sun, 29 Jan 2017 00:00:00 -0600</pubDate>
-        <link>http://wmmoon.com/2017/01/29/gymcrowd.html</link>
-        <guid isPermaLink="true">http://wmmoon.com/2017/01/29/gymcrowd.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Kobe Over the Years</title>
-        <description>&lt;p&gt;Those who know me know that I’m a huge basketball fan. And now that my playing days are over, I have transitioned from playing basketball to the even more exciting activity of analyzing basketball data.&lt;/p&gt;
+&lt;p&gt;Enjoy your workout!&lt;/p&gt;</content><author><name>wmmoon</name></author><summary type="html">It’s the start of a new year and new semester at universities everywhere. And what does that mean? Crowded gyms.</summary></entry><entry><title type="html">Kobe Over the Years</title><link href="http://localhost:4000/2017/01/26/Kobe.html" rel="alternate" type="text/html" title="Kobe Over the Years" /><published>2017-01-26T00:00:00-06:00</published><updated>2017-01-26T00:00:00-06:00</updated><id>http://localhost:4000/2017/01/26/Kobe</id><content type="html" xml:base="http://localhost:4000/2017/01/26/Kobe.html">&lt;p&gt;Those who know me know that I’m a huge basketball fan. And now that my playing days are over, I have transitioned from playing basketball to the even more exciting activity of analyzing basketball data.&lt;/p&gt;
 
 &lt;p&gt;Today we’ll be looking at one of basketball’s greatest icons, Kobe Bryant. Considered one of the greatest and most popular players to every play the game, he is particularly interesting because of his ability to stay dominant well into his 30’s, which is considered old for a professional basketball player. He was able to do so, not only by working super hard and using his incredible physical gifts, but also by being extremely smart and adaptins his style of play throughout his career to adjust to the changes in the NBA, his teammates, and his own body.&lt;/p&gt;
 
@@ -160,14 +124,4 @@ Also, interestingly enough, we can see Kobe’s percentages in the 24+ ft. range
 
 &lt;p&gt;None of this is very groundbreaking. Basketball fans know that Kobe was an athletic freak and could rise up and put you on a poster on any given night, but what made him special was his ability to work on the other parts of his game that would allow him to continue to be dominant as he got older. Another player that comes to mind who has similarly transformed his game is Vince Carter (who just turned 40 by the way and is still doing stuff like &lt;a href=&quot;http://streamable.com/6ebnr&quot;&gt;this&lt;/a&gt;).&lt;/p&gt;
 
-&lt;p&gt;So, for the basketball fans out there. Which Kobe was your favorite Kobe? (My answer: Black Mamba)&lt;/p&gt;
-</description>
-        <pubDate>Thu, 26 Jan 2017 00:00:00 -0600</pubDate>
-        <link>http://wmmoon.com/2017/01/26/Kobe.html</link>
-        <guid isPermaLink="true">http://wmmoon.com/2017/01/26/Kobe.html</guid>
-        
-        
-      </item>
-    
-  </channel>
-</rss>
+&lt;p&gt;So, for the basketball fans out there. Which Kobe was your favorite Kobe? (My answer: Black Mamba)&lt;/p&gt;</content><author><name>wmmoon</name></author><summary type="html">Those who know me know that I’m a huge basketball fan. And now that my playing days are over, I have transitioned from playing basketball to the even more exciting activity of analyzing basketball data.</summary></entry></feed>
