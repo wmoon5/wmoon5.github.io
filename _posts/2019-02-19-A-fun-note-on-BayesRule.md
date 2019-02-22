@@ -53,8 +53,6 @@ $\Pr(\textrm{Bob not interested}) = 1 - \Pr(\textrm{Bob interested})  = 0.95​$
 
 For now, let's assume that he's either interested or not interested. None of this silly grey area stuff.
 
-Plugging in the numbers:
-
 $\Pr(\textrm{Bob asks to lunch} \vert \textrm{Bob interested}) = 0.8$
 
 Bob is a pretty forward guy, so if he's interested in you, he's pretty likely to try and spend time with you by asking you to lunch.

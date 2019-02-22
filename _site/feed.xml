@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-02-21T19:31:05-06:00</updated><id>http://localhost:4000/</id><title type="html">W.M.Moon</title><subtitle>Some of my thoughts.</subtitle><author><name>wmmoon</name></author><entry><title type="html">A fun note on Bayes’ Rule</title><link href="http://localhost:4000/2019/02/21/A-fun-note-on-BayesRule.html" rel="alternate" type="text/html" title="A fun note on Bayes' Rule" /><published>2019-02-21T00:00:00-06:00</published><updated>2019-02-21T00:00:00-06:00</updated><id>http://localhost:4000/2019/02/21/A-fun-note-on-BayesRule</id><content type="html" xml:base="http://localhost:4000/2019/02/21/A-fun-note-on-BayesRule.html">&lt;h1 id=&quot;set-the-scene&quot;&gt;Set the scene&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-02-21T19:54:16-06:00</updated><id>http://localhost:4000/</id><title type="html">W.M.Moon</title><subtitle>Some of my thoughts.</subtitle><author><name>wmmoon</name></author><entry><title type="html">A fun note on Bayes’ Rule</title><link href="http://localhost:4000/2019/02/21/A-fun-note-on-BayesRule.html" rel="alternate" type="text/html" title="A fun note on Bayes' Rule" /><published>2019-02-21T00:00:00-06:00</published><updated>2019-02-21T00:00:00-06:00</updated><id>http://localhost:4000/2019/02/21/A-fun-note-on-BayesRule</id><content type="html" xml:base="http://localhost:4000/2019/02/21/A-fun-note-on-BayesRule.html">&lt;h1 id=&quot;set-the-scene&quot;&gt;Set the scene&lt;/h1&gt;
 
 &lt;p&gt;An acquaintance (let’s call him Bob) comes up to you and asks if you want to grab lunch tomorrow. You wonder to yourself if this is just a friendly platonic lunch or if your acquantaince is romantically interested in you. Let’s use Bayes’ rule to help us think about this!&lt;/p&gt;
 
@@ -44,8 +44,6 @@
 &lt;p&gt;$\Pr(\textrm{Bob not interested}) = 1 - \Pr(\textrm{Bob interested})  = 0.95​$&lt;/p&gt;
 
 &lt;p&gt;For now, let’s assume that he’s either interested or not interested. None of this silly grey area stuff.&lt;/p&gt;
-
-&lt;p&gt;Plugging in the numbers:&lt;/p&gt;
 
 &lt;p&gt;$\Pr(\textrm{Bob asks to lunch} \vert \textrm{Bob interested}) = 0.8$&lt;/p&gt;
 
