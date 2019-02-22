@@ -1,4 +1,109 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-05-12T22:22:58-05:00</updated><id>http://localhost:4000/</id><title type="html">W.M.Moon</title><subtitle>Some of my thoughts.</subtitle><author><name>wmmoon</name></author><entry><title type="html">Do rebounds really win games?</title><link href="http://localhost:4000/2017/02/12/rebounding.html" rel="alternate" type="text/html" title="Do rebounds really win games?" /><published>2017-02-12T00:00:00-06:00</published><updated>2017-02-12T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/12/rebounding</id><content type="html" xml:base="http://localhost:4000/2017/02/12/rebounding.html">&lt;p&gt;If you’re a basktball fan you might have heard this popular saying: “Rebounds win games!”&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-02-21T19:31:05-06:00</updated><id>http://localhost:4000/</id><title type="html">W.M.Moon</title><subtitle>Some of my thoughts.</subtitle><author><name>wmmoon</name></author><entry><title type="html">A fun note on Bayes’ Rule</title><link href="http://localhost:4000/2019/02/21/A-fun-note-on-BayesRule.html" rel="alternate" type="text/html" title="A fun note on Bayes' Rule" /><published>2019-02-21T00:00:00-06:00</published><updated>2019-02-21T00:00:00-06:00</updated><id>http://localhost:4000/2019/02/21/A-fun-note-on-BayesRule</id><content type="html" xml:base="http://localhost:4000/2019/02/21/A-fun-note-on-BayesRule.html">&lt;h1 id=&quot;set-the-scene&quot;&gt;Set the scene&lt;/h1&gt;
+
+&lt;p&gt;An acquaintance (let’s call him Bob) comes up to you and asks if you want to grab lunch tomorrow. You wonder to yourself if this is just a friendly platonic lunch or if your acquantaince is romantically interested in you. Let’s use Bayes’ rule to help us think about this!&lt;/p&gt;
+
+&lt;p&gt;To review, Bayes’ rule is usually described with the following equation:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation} \Pr(A \vert B) = \frac{\Pr(B \vert A)\Pr(A)}{\Pr(B)} \end{equation}​&lt;/script&gt;
+
+&lt;p&gt;First, let’s fill in $A​$ and $B​$ with something more concrete:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation}\Pr(\textrm{Bob interested} \vert \textrm{Bob asks to lunch}) = \frac{\Pr(\textrm{Bob asks to lunch} \vert \textrm{Bob interested})\Pr(\textrm{Bob interested})}{\Pr(\textrm{Bob asks to lunch})} \end{equation}​&lt;/script&gt;
+
+&lt;h1 id=&quot;whats-it-all-mean&quot;&gt;What’s it all mean?&lt;/h1&gt;
+
+&lt;p&gt;Next, we’ll go through what each term means. Feel free to skip this section if you don’t care too much about the math and want to go to the fun stuff! Wait, but I thought the math &lt;em&gt;was&lt;/em&gt; the fun stuff…&lt;/p&gt;
+
+&lt;p&gt;$\Pr(\textrm{Bob interested} \vert \textrm{Bob asks to lunch})​$: This is the question we’re trying to answer. What is the probability that Bob is interested in you &lt;em&gt;given the information that he has asked you to lunch&lt;/em&gt;?&lt;/p&gt;
+
+&lt;p&gt;$\Pr(\textrm{Bob asks to lunch} \vert \textrm{Bob interested})​$: This is sort of the reverse of the probability above. What is the probability that Bob would’ve asked you to lunch &lt;em&gt;given the fact that he is interested in you&lt;/em&gt;? Another way we can interpret this is if, in general, Bob is interested in someone, how likely is he to ask that person to lunch? You can think of this as a general statement about Bob’s personality.&lt;/p&gt;
+
+&lt;p&gt;$\Pr(\textrm{Bob interested})$: We often refer to this term as a “prior.” Basically, it means, before you received the new information (i.e. Bob asking you to lunch), what would you have thought would be the probability that Bob is into you?&lt;/p&gt;
+
+&lt;p&gt;$\Pr(\textrm{Bob asks to lunch})$: This term is often a bit more complicated to estimate. This is some general probability that Bob would have asked you to lunch without any knowledge of whether he is into you or not. Sometimes it’s easier to rewrite this term as:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{equation}\begin{aligned}
+
+\Pr(\textrm{Bob asks to lunch}) = &amp;\Pr(\textrm{Bob asks to lunch}|\textrm{Bob interested})\Pr(\textrm{Bob interested})  \\
+
+&amp;+ \Pr(\textrm{Bob asks to lunch}|\textrm{Bob not interested})\Pr(\textrm{Bob not interested})
+
+\end{aligned}\end{equation} %]]&gt;&lt;/script&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;lets-plug-in-some-numbers&quot;&gt;Let’s plug in some numbers!&lt;/h1&gt;
+
+&lt;h3 id=&quot;scenario-1&quot;&gt;Scenario 1&lt;/h3&gt;
+
+&lt;p&gt;$\Pr(\textrm{Bob interested}) = 0.05​$&lt;/p&gt;
+
+&lt;p&gt;Maybe we can assume that 1 in 20 guys will be interested in you. That seems a little high actually, but there’s nothing wrong with a little optimism.&lt;/p&gt;
+
+&lt;p&gt;$\Pr(\textrm{Bob not interested}) = 1 - \Pr(\textrm{Bob interested})  = 0.95​$&lt;/p&gt;
+
+&lt;p&gt;For now, let’s assume that he’s either interested or not interested. None of this silly grey area stuff.&lt;/p&gt;
+
+&lt;p&gt;Plugging in the numbers:&lt;/p&gt;
+
+&lt;p&gt;$\Pr(\textrm{Bob asks to lunch} \vert \textrm{Bob interested}) = 0.8$&lt;/p&gt;
+
+&lt;p&gt;Bob is a pretty forward guy, so if he’s interested in you, he’s pretty likely to try and spend time with you by asking you to lunch.&lt;/p&gt;
+
+&lt;p&gt;$\Pr(\textrm{Bob asks to lunch} \vert \textrm{Bob not interested}) = 0.4​$&lt;/p&gt;
+
+&lt;p&gt;When you think about it a little harder, you remember seeing him going out to lunch with a decent number of platonic friends as well. It’s worth noting here that the probability that Bob asks you to lunch when he’s not interested in you is still only half compared to when he is interested.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Plugging in the numbers:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\Pr(\textrm{Bob interested} \vert \textrm{Bob asks to lunch}) = \frac{(0.8 \times 0.05)}{(0.8 \times 0.05) + (0.4 \times 0.95)} = \mathbf{0.095}&lt;/script&gt;
+
+&lt;p&gt;A 9.5% probability that Bob is interested! So, our previous default guess whether Bob’s interested was 5%, but after we’ve been given the new information that he has asked you to lunch, that probability has increased to 9.5%. The probability increased, but still pretty unlikely he’s actually interested.&lt;/p&gt;
+
+&lt;h3 id=&quot;scenario-2&quot;&gt;Scenario 2&lt;/h3&gt;
+
+&lt;p&gt;In this scenario let’s change one thing: the probability that Bob asks a friend that he’s not interested in out to lunch.&lt;/p&gt;
+
+&lt;p&gt;$\Pr(\textrm{Bob interested}) = 0.05​$&lt;/p&gt;
+
+&lt;p&gt;$\Pr(\textrm{Bob not interested}) = 1 - \Pr(\textrm{Bob interested})  = 0.95$&lt;/p&gt;
+
+&lt;p&gt;$\Pr(\textrm{Bob asks to lunch} \vert \textrm{Bob interested}) = 0.8$&lt;/p&gt;
+
+&lt;p&gt;$\Pr(\textrm{Bob asks to lunch} \vert \textrm{Bob not interested}) = 0.01​$&lt;/p&gt;
+
+&lt;p&gt;In this scenario, you rarely ever see Bob out to lunch with people. He pretty much always eats alone at his desk.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Plugging in the numbers:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\Pr(\textrm{Bob interested} \vert \textrm{Bob asks to lunch}) = \frac{(0.8 \times 0.05)}{(0.8 \times 0.05) + (0.01 \times 0.95)} = \mathbf{0.808}&lt;/script&gt;
+
+&lt;p&gt;Wow, 80.8%! That’s way different from the result we got previously. But intuitively this makes sense! If it’s a relatively normal thing for Bob to ask people out to lunch, regardless of whether he’s interested or not, then his asking you to lunch doesn’t really say much. However, if it’s really out of character for the guy to ask someone out to lunch if he’s not interested, then we might start getting suspicious.&lt;/p&gt;
+
+&lt;h3 id=&quot;scenario-3&quot;&gt;Scenario 3&lt;/h3&gt;
+
+&lt;p&gt;As a final example, let’s see what happens when Bob literally asks &lt;em&gt;everyone&lt;/em&gt; out to lunch at some point.&lt;/p&gt;
+
+&lt;p&gt;$\Pr(\textrm{Bob interested}) = 0.05​$&lt;/p&gt;
+
+&lt;p&gt;$\Pr(\textrm{Bob not interested}) = 1 - \Pr(\textrm{Bob interested})  = 0.95​$&lt;/p&gt;
+
+&lt;p&gt;$\Pr(\textrm{Bob asks to lunch} \vert \textrm{Bob interested}) = 1.0​$&lt;/p&gt;
+
+&lt;p&gt;$\Pr(\textrm{Bob asks to lunch} \vert \textrm{Bob not interested}) = 1.0​$&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\Pr(\textrm{Bob interested} \vert \textrm{Bob asks to lunch}) = \frac{(1.0 \times 0.05)}{(1.0 \times 0.05) + (1.0 \times 0.95)} = \mathbf{0.05}&lt;/script&gt;
+
+&lt;p&gt;A 5% probability that Bob is interested! Wait, but that was already your prior probability before he asked you to lunch. Does this make sense?&lt;/p&gt;
+
+&lt;p&gt;Yes it does! If Bob really does go to lunch with everyone, then we should get exactly zero information from the fact that he’s asked you to lunch regarding the probability that he’s interested in you. In other words, there should be no difference between $\Pr(\textrm{Bob interested})$ and $\Pr(\textrm{Bob interested} \vert \textrm{Bob asks to lunch})$.&lt;/p&gt;
+
+&lt;h1 id=&quot;closing-thoughts&quot;&gt;Closing Thoughts&lt;/h1&gt;
+
+&lt;p&gt;Of course this is a pretty silly and simplistic example, but I do think there are a lot of situations where Bayesian reasoning provides a nice structure to think through problems and situations. How do you think you can apply these concepts to your own life?&lt;/p&gt;
+
+&lt;p&gt;Thanks for reading!&lt;/p&gt;</content><author><name>wmmoon</name></author><summary type="html">Set the scene</summary></entry><entry><title type="html">Do rebounds really win games?</title><link href="http://localhost:4000/2017/02/12/rebounding.html" rel="alternate" type="text/html" title="Do rebounds really win games?" /><published>2017-02-12T00:00:00-06:00</published><updated>2017-02-12T00:00:00-06:00</updated><id>http://localhost:4000/2017/02/12/rebounding</id><content type="html" xml:base="http://localhost:4000/2017/02/12/rebounding.html">&lt;p&gt;If you’re a basktball fan you might have heard this popular saying: “Rebounds win games!”&lt;/p&gt;
 
 &lt;p&gt;For those non-basketball junkies out there, a rebound is when a player retrieves the ball after someone has just missed a shot. An “offensive rebound” is when your team is on offense and someone on your own team has just missed a shot and a “defensive rebound” is when your team is on defense and someone on the other team has just missed a shot.&lt;/p&gt;
 

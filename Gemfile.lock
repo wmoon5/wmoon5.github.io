@@ -10,8 +10,13 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     colorator (1.1.0)
+    commonmarker (0.18.2)
+      ruby-enum (~> 0.5)
+    concurrent-ruby (1.1.4)
     ffi (1.9.23)
     forwardable-extended (2.6.0)
+    i18n (1.5.3)
+      concurrent-ruby (~> 1.0)
     jekyll (3.6.2)
       addressable (~> 2.4)
       colorator (~> 1.0)
@@ -45,6 +50,8 @@ GEM
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     rouge (2.2.1)
+    ruby-enum (0.7.2)
+      i18n
     ruby_dep (1.5.0)
     safe_yaml (1.0.4)
     sass (3.5.6)
@@ -58,6 +65,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.12)
+  commonmarker
   jekyll (~> 3.6.0)
   jekyll-feed (~> 0.6)
   jekyll-paginate (~> 1.1.0)
