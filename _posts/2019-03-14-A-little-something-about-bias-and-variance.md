@@ -23,7 +23,7 @@ E[(Y-g)^2]
 $$
 
 
-A question that came to mind when I saw this equation was: **what distribution is this expectation taken over?** The answer is that this expectation is taken over the distribution of all random training datasets. If we train the same model over different randomly sampled training datasets, we would probably get a different squared error each time. In other words, there is some distribution of squared errors and we care about the expected value or average of this distribution.
+A question that came to mind when I saw this equation was: **what distribution is this expectation taken over?** The answer is that the expectation is taken over the distribution of all random training datasets. If we train the same model over different randomly sampled training datasets, we would probably get a different squared error each time. In other words, there is some distribution of squared errors and we care about the expected value or average of this distribution.
 
 Next we'll do some algebra. For brevity we shorten $$f(x)​$$ and $$g(x)$$ as simply $$f​$$ and $$g​$$:
 
@@ -78,5 +78,5 @@ To make things concrete, let's return to our example of predicting the sale pric
 
 Well, that was all a bit dense and technical, but at least we can now make a more precise statement about the bias variance tradeoff! 
 
-**If we assume an independent irreduceable error with mean equal to zero, we can decompose the expected squared error between a trained model's prediction and the true value as the sum of an irreducible error, a bias term quantifying the expected difference between the trained model's prediction and the true underlying model's prediction, and a variance term quantifying how much the trained model's predictions fluctuates based on the randomness from randomly sampling training datasets**.
+**If we assume an independent irreduceable error with mean equal to zero, we can decompose the expected squared error between a trained model's prediction and the true value as the sum of an irreducible error, a bias term quantifying the expected difference between the trained model's prediction and the true underlying model's prediction, and a variance term quantifying how much the trained model's predictions fluctuate based on the randomness from randomly sampling training datasets**.
 

@@ -18,3 +18,5 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
 
+# Google Analytics
+google_analytics: UA-136343089-1
