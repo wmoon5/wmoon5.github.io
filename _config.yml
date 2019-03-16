@@ -1,9 +1,9 @@
-title: W.M.Moon
+title: Posts
 description: Personal
-author: Wooyoung Moon
+author: W.M.Moon
 github: https://github.com/wmoon5
 about: Interested in math, statistics, machine learning, artificial intelligence, sports, and people!
-disqus_shortname: stackproblems
+disqus_shortname: wmmoon
 google_analytics: UA-136343089-1
 avatar_url: /static/img/avatar.jpg
 
@@ -28,8 +28,8 @@ social:
       link: "https://github.com/wmoon5"
 
 share:
-    twitter_username: github.io
-    fb_appid: 1749788565247320
+    #twitter_username: github.io
+    #fb_appid: 1749788565247320
 
 urls:
     - text: About Me
@@ -41,8 +41,8 @@ urls:
 
 url: "http://wmmoon.com"
 baseurl: ""
-paginate: 5
-per_page: 5
+paginate: 10
+per_page: 10
 paginate_path: "/page/:num/"
 markdown: kramdown
 plugins:
