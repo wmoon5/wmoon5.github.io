@@ -22,30 +22,30 @@ social:
       link: "#"
     - icon: fa-linkedin
       link: "#"
-    - icon: fa-stack-exchange
-      link: "#"
+      #- icon: fa-stack-exchange
+      #link: "#"
     - icon: fa-github
       link: "https://github.com/wmoon5"
 
 share:
-  twitter_username: github.io
-  fb_appid: 1749788565247320
+    #twitter_username: github.io
+    #fb_appid: 1749788565247320
 
 urls:
     - text: About Me
       url: /about/
-    - text: My Projects
+    - text: Projects
       url: /projects/
-    - text: XML Feed
-      url: /feed.xml
+      #    - text: XML Feed
+      #      url: /feed.xml
 
 url: "http://wmmoon.com"
 baseurl: ""
-paginate: 20
-per_page: 20
+paginate: 5
+per_page: 5
 paginate_path: "/page/:num/"
 markdown: kramdown
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-gist
 

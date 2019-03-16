@@ -3,6 +3,7 @@ layout: post
 title: "A little something about bias and variance"
 mathjax: true
 date: 2019-03-14
+categories: [statistics, ML]
 ---
 
 In my experience, the most common interview topic brought up during data science and machine learning interviews is the famous **"bias-variance trade-off."** Let's dive right in.

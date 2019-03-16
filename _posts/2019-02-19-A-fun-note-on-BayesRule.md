@@ -3,6 +3,7 @@ layout: post
 title: "A fun note on Bayes' Rule"
 mathjax: true
 date: 2019-02-21
+categories: [statistics]
 ---
 
 # Set the scene
