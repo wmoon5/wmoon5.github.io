@@ -18,7 +18,7 @@ $$
 
 We then take a training dataset of $m​$ samples and train a model $$g(X)$$ in order to estimate the true model $$f(X)​$$ as well as possible. Thus, a useful metric to keep track of is the expected squared error of trained model for a specific given input $$X=x​$$.
 
- 
+
 $$
 E[(Y-g)^2]
 $$
@@ -30,12 +30,12 @@ Next we'll do some algebra. For brevity we shorten $$f(x)​$$ and $$g(x)$$ as s
 
 
 $$
-\begin{aligned}
+\begin{align}
 E[(Y-g)^2] &= E[(Y-f+f-g)^2] \\
 &= E[(Y-f)^2 + (f-g)^2 + ((Y-f)(f-g))] \\
 &= E[(Y-f)^2] + E[(f-g)^2] + E[(Y-f)(f-g)] \\
 &= \textrm{Irreducible Error} + E[(f-g)^2] + \textrm{Stuff that equals zero given a couple assumptions}
-\end{aligned}
+\end{align}
 $$
 
 
@@ -59,13 +59,13 @@ This term equals zero when we make a couple assumptions about the error term $$\
 
 
 $$
-\begin{aligned}
+\begin{align}
 E[(f-g)^2] &=  E[f^2 - 2fg + g^2] \\
 &= f^2 - 2fE[g] + E[g^2] \\
 &= (f^2 + E[g]^2 - 2fE[g]) + (E[g^2] - E[g]^2) \\
 &= E[f-E[g]]^2 + E[(g-E[g])^2] \\
 &= \textrm{Bias}^2 + \textrm{Variance}
-\end{aligned}
+\end{align}
 $$
 
 
